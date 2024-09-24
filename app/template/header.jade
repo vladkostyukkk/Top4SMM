@@ -1,0 +1,56 @@
+header#header.header
+  .container
+    nav.navbar.navbar-default(role='navigation')
+      .container-fluid
+          // Brand and toggle get grouped for better mobile display
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+              span.sr-only Toggle navigation             
+              span.icon-bar            
+              span.icon-bar          
+              span.icon-bar       
+          // Collect the nav links, forms, and other content for toggling
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.active
+                a(href='#header') Home         
+              li
+                a(href='#registration') Registration
+              li
+                a(href='#advantage') Advanteges
+              li
+                a(href='#price') Prices
+              li
+                a(href='#carousel-wrp') Special Offers
+              li
+                a(href='#reviews') Reviews
+          // /.navbar-collapse
+        // /.container-fluid
+    .row
+      .col-sm-7
+        a.top-logo(href="#")
+
+        h1 <span>Powerful</span> white and safe promotion
+      .col-sm-5
+        #registration.register-form
+          span Please Login or Register bellow
+          form
+            .input-wr
+              input.placeholder(type="text" id="input1" placeholder="Username or Email")
+              label(for="input1" class="img-form1") 
+            .input-wr
+              input(type="text" id="input2" placeholder="Password")
+              label(for="input2" class="img-form2")
+            .btn-wrp.clearfix
+              a.btn(href="#") Login
+              a.btn-red(href="#") Registration
+            a.recover(href="#") Recovery password
+    .contacts
+      a(href="#") <span class="mdi mdi-skype-business"></span> trust-g                      
+      a(href="#") <span class="icq"><i></i></span> 608583
+      a(href="mailto:top4smm@gmail.com") <span class="mdi mdi-email-open-outline"></span> top4smm@gmail.com
+
+
+
+  // container end
+// header

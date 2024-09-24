@@ -1,0 +1,76 @@
+@import mixins
+@import const
+@import sprite
+
+/*----------- Typography *
+ ------------------------------------------------------------*/
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  background-color: $body-bg-color
+  font-family: $site-font-family
+  font-size: $site-text-size
+  line-height: $site-line-height
+  color: $site-text-color
+  margin: 0
+  padding: 0
+  width: 100%
+
+h1, .title-h1, h2, .title-h2, h3, .title-h3, h4, .title-h4, h5, .title-h5
+  display: block
+  font-family: $site-font-family
+  line-height: 1.1em
+  color: $site-title-color
+  margin: 0 0 15px
+
+h1, .title-h1
+  font-size: $title-h1-size
+h2, .title-h2
+  font-size: $title-h2-size
+h3, .title-h3
+  font-size: $title-h3-size
+h4, .title-h4
+  font-size: $title-h4-size
+h5, .title-h5
+  font-size: $title-h5-size
+
+p
+  margin: 0 0 20px
+  padding: 0
+
+ul
+  padding: 0
+  margin: 0 0 20px
+
+a
+  color: $color-link
+  text-decoration: underline
+  transition: all 0.6s ease
+  -webkit-transition: all 0.6s ease
+  -moz-transition: all 0.6s ease
+  &:hover
+    color: #fff
+
+img
+  vertical-align: middle
+  max-width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

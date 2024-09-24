@@ -1,0 +1,808 @@
+@import partials/reset 
+@import partials/sprite
+@import partials/fonts
+@import partials/mixins
+@import partials/const
+@import partials/typography
+@import partials/buttons
+@import partials/forms
+@import partials/layout
+@import partials/plugins
+
+.header 
+  background: url("../images/header-bg.jpg") 0 0 no-repeat
+  background-size: cover
+  h1
+    font-size: 70px
+    line-height: 70px
+    color: #fff
+    font-family: 'ProximaNova'
+    font-weight: 800
+    text-transform: uppercase
+    margin-top: 45px
+    span 
+      color: #f63c3c 
+      display: block
+
+.top-logo
+  display: inline-block
+  position: relative
+  width: 150px
+  height: 69px
+  transition: all 0.6s ease
+  &:before 
+    position: absolute
+    content: ' '
+    background: url("../images/top4-logo.png") 0 0 no-repeat
+    width: 150px
+    height: 69px 
+    background-size: cover
+    transition: all 0.6s ease
+  &:hover
+    transition: all 0.6s ease
+    &:before 
+      position: absolute
+      content: ' '
+      background: url("../images/top4-logo-hover.png") 0 0 no-repeat
+      width: 150px
+      height: 69px 
+      background-size: cover
+      transition: all 0.6s ease
+
+.navbar-default
+  background-color: transparent 
+  border: none
+  text-align: center
+  margin-bottom: 65px
+  .navbar-toggle
+    background-color: #f63c3c
+    border: none
+    &:hover, &:focus, &:active
+      background-color: #f63c3c
+    .icon-bar
+      background-color: #FFF
+  .navbar-nav
+    display: inline-block
+    float: none
+    > li
+      > a
+        font-family: 'ProximaNova'
+        font-weight: 300
+        color: #fff
+        padding: 14px 2px
+        margin: 0 13px
+        transition: all 0.2s ease
+        -webkit-transition: all 0.2s ease
+        -moz-transition: all 0.2s ease
+        text-decoration: none
+        &:hover, &:focus
+          color: #fff
+          border-bottom: 4px solid #f63c3c
+    .active
+      > a
+        background-color: transparent
+        color: #fff
+        border-bottom: 4px solid transparent
+        &:hover, &:focus
+          background: transparent
+          color: #fff
+
+.register-form
+  padding: 45px 55px
+  background-color: #101010
+  text-align: center
+  .btn 
+    border: 1px solid #f63c3c
+    background-color: #101010
+    color: #666666
+    font-size: 16px
+    font-family: 'ProximaNova'
+    font-weight: 600
+    border-radius: 0
+    padding: 5px 20px
+    float: left
+    margin-top: 50px
+    &:hover
+      background-color: #FFF
+      color: #f63c3c
+      border: 1px solid #fff
+  .btn-red
+    color: #f63c3c
+    text-decoration: underline
+    display: inline-block
+    float: right
+    padding: 5px 20px
+    margin-top: 50px
+    font-family: 'ProximaNova'
+    font-weight: 600
+    font-size: 16px
+    line-height: 28px
+    transition: all 0.6s ease
+    -webkit-transition: all 0.6s ease
+    -moz-transition: all 0.6s ease
+    &:hover
+      color: #fff
+  .recover
+    color: #666666
+    font-family: 'ProximaNova'
+    font-weight: 600
+    display: inline-block
+    margin-top: 25px
+    transition: all 0.6s ease
+    -webkit-transition: all 0.6s ease
+    -moz-transition: all 0.6s ease
+    &:hover
+      color: #f63c3c
+  span 
+    color: #fff 
+    font-family: 'ProximaNova'
+    font-weight: 600
+    font-size: 22px
+    margin-bottom: 50px
+    display: inline-block
+  input
+    border: none
+    border-bottom: 1px solid #666666
+    color: #666666
+    font-size: 14px
+    +placeholder-color(#666666)
+    background: transparent
+    transition: all 0.6s ease
+    -webkit-transition: all 0.6s ease
+    -moz-transition: all 0.6s ease
+    &:hover, &:focus, &:active
+      color: #f63c3c
+      border-bottom: 1px solid #f63c3c
+      +placeholder-color(#f63c3c)
+      .img-form1
+        &:before
+          position: absolute
+          content: ' '
+          +sprite($img-form1-active)
+          top: 50%
+          margin-top: -20px
+          right: 5px
+      .img-form2
+        &:before
+          position: absolute
+          content: ' '
+          +sprite($img-form2-active)
+          top: 50%
+          margin-top: -20px
+          right: 5px
+  .input-wr
+    position: relative
+    transition: all 0.6s ease
+    -webkit-transition: all 0.6s ease
+    -moz-transition: all 0.6s ease
+    &:hover, &:focus, &:active
+      .img-form1
+        &:before
+          position: absolute
+          content: ' '
+          +sprite($img-form1-active)
+          top: 50%
+          margin-top: -20px
+          right: 5px
+      .img-form2
+        &:before
+          position: absolute
+          content: ' '
+          +sprite($img-form2-active)
+          top: 50%
+          margin-top: -20px
+          right: 5px
+      label 
+        transition: all 0.6s ease
+        -webkit-transition: all 0.6s ease
+        -moz-transition: all 0.6s ease
+  .img-form1
+    &:before
+      position: absolute
+      content: ' '
+      +sprite($img-form1)
+      top: 50%
+      margin-top: -20px
+      right: 5px
+  .img-form2
+    &:before
+      position: absolute
+      content: ' '
+      +sprite($img-form2)
+      top: 50%
+      margin-top: -20px
+      right: 5px
+
+.contacts
+  text-align: center
+  margin-top: 130px
+  margin-bottom: 50px
+  a
+    color: #b9b9b9
+    font-size: 18px
+    font-family: 'ProximaNova'
+    font-weight: 300
+    display: inline-block
+    margin: 0 15px
+    text-decoration: none
+    transition: all 0.6s ease
+    -webkit-transition: all 0.6s ease
+    -moz-transition: all 0.6s ease
+    span 
+      font-size: 22px
+      vertical-align: middle
+    &:hover
+      color: #f63c3c
+      text-decoration: none
+      &:hover i 
+        opacity: 1
+.icq
+  display: inline-block
+  position: relative
+  text-indent: -9999px
+  +sprite($icq)
+  margin-bottom: 5px
+  
+
+.icq i
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  +sprite($icq-active)
+  opacity: 0
+  -webkit-transition: opacity 0.6s
+  -moz-transition: opacity 0.6s
+  -o-transition: opacity 0.6s
+
+
+.title-h2
+  font-size: 48px
+  line-height: 40px
+  color: #fff 
+  font-family: 'ProximaNova'
+  font-weight: 300
+  position: relative
+  padding-bottom: 25px
+  text-align: center
+  margin-bottom: 40px
+  &:before
+    position: absolute
+    content: ' '
+    width: 100px
+    height: 4px
+    background-color: #f63c3c
+    bottom: 0
+    left: 50%
+    margin-left: -50px
+    transition: all 0.6s ease-out
+    -webkit-transition: all 0.6s ease-out
+    -moz-transition: all 0.6s ease-out
+  &:hover:before 
+    width: 200px
+    margin-left: -100px
+    
+    
+
+.our-advantages
+  background: #050304
+  padding-top: 70px
+  .title-descr
+    color: #fff 
+    font-size: 24px
+    font-family: 'ProximaNova'
+    font-weight: 300
+  .title-h2
+    margin-top: 250px
+    text-align: left
+    margin-bottom: 20px
+    overflow: hidden
+    &:before
+      position: absolute
+      content: ' '
+      width: 165px
+      left: 0
+      margin-left: 0
+      transition: all 0.6s ease-out
+      -webkit-transition: all 0.6s ease-out
+      -moz-transition: all 0.6s ease-out
+    &:hover:before 
+      width: 200px
+
+.advantage-item
+  max-width: 235px
+  height: 350px
+  text-align: left
+  vertical-align: top
+  display: inline-block
+  padding: 30px 25px
+  margin: 0 20px 40px
+  transition: all 0.2s ease
+  -webkit-transition: all 0.2s ease
+  -moz-transition: all 0.2s ease
+  &:hover
+    background-color: #f63c3c
+    border-radius: 5px 
+    box-shadow: 0 0 70px #f63c3c
+    padding: 25px
+    .advantage1
+      +sprite($advantage1-active)
+    .advantage2
+      +sprite($advantage2-active)
+    .advantage3
+      +sprite($advantage3-active)
+    .advantage4
+      +sprite($advantage4-active)
+    .advantage5
+      +sprite($advantage5-active)
+    .advantage6
+      +sprite($advantage6-active)
+    .adv-descr
+      color: #fff
+  .adv-icon-wr
+    height: 90px
+  .advantage1
+    +sprite($advantage1)
+  .advantage2
+    +sprite($advantage2)
+  .advantage3
+    +sprite($advantage3)
+  .advantage4
+    +sprite($advantage4)
+  .advantage5
+    +sprite($advantage5)
+  .advantage6
+    +sprite($advantage6)
+  .adv-title
+    color: #fff 
+    font-family: 'ProximaNova'
+    font-weight: 800
+    font-size: 20px
+    text-transform: uppercase
+    margin-bottom: 40px
+  .adv-descr
+    color: rgba(255, 255, 255, 0.5)
+    font-family: 'ProximaNova'
+    font-weight: 300
+    font-size: 15px
+    max-height: 230px
+    overflow: hidden
+
+.static-bg-wrap
+  background: #1b1b1b url(../images/bg_02.png) 0 0 no-repeat
+  background-attachment: fixed
+
+.youtube
+  padding: 30px 0 70px
+
+.yt-options
+  font-size: 24px
+  color: #fff 
+  font-family: 'ProximaNova'
+  font-weight: 800
+  text-align: center
+
+.yt-opt-item
+  font-family: 'ProximaNova'
+  font-weight: 300
+  color: #fff 
+  font-size: 16px
+  transition: all 0.6s ease
+  -webkit-transition: all 0.6s ease
+  -moz-transition: all 0.6s ease
+  height: 25px
+  &:hover
+    font-size: 17px
+  span 
+    color: #f63c3c
+
+.yt-container
+  max-width: 1000px
+
+.sl-container
+  max-width: 1100px
+
+.offers-list
+  margin: 0 -25px
+
+.yt-offer
+  background-color: #101010
+  padding: 25px 35px
+  text-align: center
+  width: 300px
+  min-height: 320px
+  display: inline-block
+  margin: 15px
+  transition: all 0.4s ease
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  &:hover
+    box-shadow: 0 0 29px #000000
+  .views
+    font-family: 'ProximaNova'
+    font-weight: 300
+    color: #fff 
+    font-size: 22px
+    text-align: center
+  .amount
+    font-family: 'ProximaNova'
+    font-weight: 600
+    color: #f63c3c
+    font-size: 22px
+    text-align: center
+  .price
+    font-family: 'ProximaNova'
+    font-weight: 800
+    color: #fff 
+    font-size: 60px
+    line-height: 60px
+    text-align: center
+    margin-top: 45px
+    span 
+      font-size: 36px
+      vertical-align: top
+  .btn 
+    display: inline-block
+    text-align: center
+    margin-top: 40px
+    font-size: 18px
+    background-color: transparent 
+    border: 1px solid #f63c3c
+    color: #fff
+    &:hover
+      border: 1px solid transparent
+      background-color: #f63c3c
+
+.slick-dots li button:before
+  display: none
+
+.inn-wr 
+  height: 72px
+
+.instagram
+  padding: 60px 0 35px
+  .offers-list
+    text-align: center
+  .amount
+    color: #fff
+  .price
+    height: 80px
+  .setup
+    color: rgba(255, 255, 255, 0.5)
+    font-size: 18px
+    line-height: 20px
+    margin-top: 10px
+    font-family: 'ProximaNova'
+    font-weight: 300
+
+.info-block
+  max-width: 815px
+  margin: 20px auto 0
+  background-color: #101010
+  color: #fff 
+  font-size: 24px
+  font-family: 'ProximaNova'
+  font-weight: 400
+  text-align: center
+  padding: 10px 110px
+
+.carousel
+  background: url("../images/footer-bg_02.jpg") 0 0 repeat-y
+  min-height: 400px
+  .item
+    height: 700px
+  .title-h2 
+    color: #eeeeee
+
+.carousel-caption
+  top: 30px
+  left: 0
+  right: 0
+
+.carousel-control.left
+  +sprite($arrowleft)
+  top: 50%
+  margin-top: -68px
+  left: 30px
+  transition: none
+  &:hover
+    +sprite($arrowleft-active)
+.carousel-control.right 
+  +sprite($arrowright)
+  top: 50%
+  margin-top: -68px
+  right: 30px
+  transition: none
+  &:hover
+    +sprite($arrowright-active)
+
+.slide-adv
+  text-align: left
+  margin-top: 100px
+  li 
+    font-size: 36px
+    line-height: 40px
+    color: #ededed
+    font-family: 'ProximaNova'
+    font-weight: 100
+    position: relative
+    padding-left: 60px
+    margin-bottom: 20px
+    &:before
+      position: absolute
+      content: ' '
+      left: 0
+      top: 50%
+      margin-top: -24px
+      +sprite($checkmark)
+
+.slide-inst
+  margin-left: 40%
+  margin-top: 135px
+  li 
+    padding-left: 0
+    &:before 
+      display: none
+    span 
+      color: #f63c3c
+      display: inline-block
+      margin-right: 35px
+      font-size: 30px
+      line-height: 30px 
+
+.inst-text
+  margin-left: 40%
+  color: #dcdcdc
+  font-size: 18px
+  font-family: 'ProximaNova'
+  font-weight: 400
+  text-align: left
+  margin-top: 65px
+  max-width: 600px
+  text-align: justify
+
+.reviews-main
+  background: url("../images/slide-bg_02.jpg") 0 0 repeat-y
+  padding: 55px 0 45px
+
+.slick-slide
+  background-color: #1e1e1e
+  border-radius: 5px
+  outline: none
+  color: #fff 
+  font-size: 16px
+  line-height: 20px
+  font-family: 'ProximaNova'
+  font-weight: 300
+  padding: 20px 30px 30px 70px
+  margin: 0 20px
+  position: relative
+  float: none
+  transform: scale(0.8)
+  transition: all 0.4s ease
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  text-align: justify
+  &:before
+    position: absolute
+    content: '“'
+    font-size: 70px
+    line-height: 70px
+    font-family: 'ProximaNova'
+    font-weight: 300
+    color: #fff
+    top: 15px
+    left: 15px
+  &:after
+    position: absolute
+    content: ' '
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 32px 32px 0 0
+    border-color: #1e1e1e transparent transparent transparent
+    bottom: -31px
+    left: 42px
+    transition: all 0.4s ease
+    -webkit-transition: all 0.4s ease
+    -moz-transition: all 0.4s ease
+
+.slick-center
+  background-color: #000000
+  border-radius: 5px
+  color: #fff 
+  font-size: 16px
+  line-height: 20px
+  font-family: 'ProximaNova'
+  font-weight: 300
+  padding: 20px 30px 30px 70px
+  margin: 0 20px
+  position: relative
+  float: none
+  transform: scale(1)
+  transition: all 0.4s ease
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  &:before
+    position: absolute
+    content: '“'
+    font-size: 90px
+    line-height: 90px
+    font-family: 'ProximaNova'
+    font-weight: 300
+    color: #fff
+    top: 15px
+    left: 15px
+  &:after
+    position: absolute
+    content: ' '
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 32px 32px 0 0
+    border-color: #000000 transparent transparent transparent
+    bottom: -31px
+    left: 42px
+    transition: all 0.4s ease
+    -webkit-transition: all 0.4s ease
+    -moz-transition: all 0.4s ease
+
+
+
+.slick-initialized .slick-slide
+  display: inline-block
+  vertical-align: middle
+
+.slick-prev 
+  left: 20px
+  z-index: 9999
+  width: 340px
+  height: 100%
+  background: transparent
+  &:before
+    content: ' '
+
+
+.slick-next
+  right: 20px
+  z-index: 9999
+  width: 340px
+  height: 100%
+  background: transparent
+  &:before
+    content: ' '
+
+.slick-dots
+  bottom: -70px
+  li 
+    display: inline-block
+    width: 40px
+    height: 4px
+    background-color: rgba(255, 255, 255, 0.2)
+  .slick-active
+    background-color: #FFF
+
+.write-by
+  margin-top: 30px
+  .wr-img
+    display: inline-block
+    float: left
+    border-radius: 50%
+    overflow: hidden
+  .user
+    margin-left: 75px 
+    color: rgba(255, 255, 255, 0.3)
+    font-family: 'ProximaNova'
+    font-weight: 600
+    margin-top: 10px
+    font-size: 18px
+  .info 
+    margin-left: 75px
+    color: rgba(255, 255, 255, 0.3)
+    font-family: 'ProximaNova'
+    font-weight: 300
+    text-transform: uppercase
+    font-size: 18px
+
+.slick-dotted.slick-slider
+  margin-bottom: 75px
+
+.slick-list 
+  padding-bottom: 40px !important
+
+.check-reviews
+  text-align: center
+  font-size: 24px
+  color: #535353
+  margin-top: 120px
+
+.footer
+  background: url("../images/footer-bg_02.jpg") 0 0 repeat-y
+  padding: 60px 0
+
+.footer-contact
+  float: right
+  margin: 0
+
+.copyright
+  float: left
+  font-size: 13px 
+  font-family: 'ProximaNova'
+  font-weight: 300
+  color: #fff
+
+.text-comment
+  max-height: 100px
+  overflow: hidden
+.reviews-slider
+  min-height: 285px
+
+@media (max-width: 1200px)
+  .yt-offer
+    margin: 15px
+    width: 290px
+  .offers-list
+    text-align: center
+@media (max-width: 992px)
+  .advantage-item
+    margin: 0px 10px 40px
+  .title-h2
+    font-size: 36px
+  .our-advantages .title-descr
+    font-size: 20px
+  .slide-adv
+    margin-left: 40px
+    li 
+      font-size: 24px
+      line-height: 30px
+  .register-form .btn-red
+    float: none
+    margin-top: 10px
+    vertical-align: -webkit-baseline-middle
+  .register-form .btn
+    float: none
+    margin-top: 20px
+  .register-form .recover
+    margin-top: 10px
+  .slide-inst
+    margin-left: 50%
+  .inst-text
+    margin-left: 50%
+@media (max-width: 786px)
+  .carousel-inner > div
+    background: none !important
+  .our-advantages .title-h2
+    margin-top: 0
+  .info-block
+    padding: 5px
+    font-size: 16px
+  .header h1
+    font-size: 46px
+    line-height: 50px
+  .copyright 
+    float: none
+    text-align: center
+  .footer-contact
+    float: none
+  .contacts
+    margin: 20px 0
+  .carousel-control.left
+    left: 10px
+  .carousel-control.right 
+    right: 10px
+  .slide-adv
+    margin-left: 22px
+    li
+      font-size: 20px
+  .slide-inst
+    margin-left: 5%
+    li 
+      span 
+        margin-right: 20px
+        vertical-align: middle
+  .inst-text
+    margin-left: 5%
+    margin-right: 5%
+  .navbar-default
+    margin-bottom: 0
