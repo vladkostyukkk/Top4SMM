@@ -1,4 +1,4 @@
-@import const
+@import _const
 
 // placeholder
 =placeholder-color($color-pl)
@@ -15,17 +15,6 @@
   -moz-border-radius: $radius
   -ms-border-radius: $radius
   border-radius: $radius
-
-// box-shadow
-=box-shadow($top, $left, $blur, $color, $inset:false)
-  @if $inset
-    -webkit-box-shadow:inset $top $left $blur $color
-    -moz-box-shadow:inset $top $left $blur $color
-    box-shadow:inset $top $left $blur $color
-  @else
-    -webkit-box-shadow: $top $left $blur $color
-    -moz-box-shadow: $top $left $blur $color
-    box-shadow: $top $left $blur $color
 
 // base table
 =table-base
